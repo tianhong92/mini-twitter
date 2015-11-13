@@ -1,0 +1,32 @@
+<h1>This is my Twitter</h1>
+
+<a href="#" onclick="this.style.backgroundColor='#990000'">Paint it red</a>
+<a href="#" onclick="this.style.backgroundColor='#009900';this.style.color='#FFFFFF';">Paint it green</a>
+
+</p>
+
+<b>Twitters</b>
+
+<%= form_for(@post, remote:true) do|f| %>
+    <p>
+      <%= f.label :message %><br>
+      <%= f.text_area :message %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>
+
+<ul id="posts">
+  <%= render @posts %>
+</ul>
+
+
+
+
+
+
+
+
+
+
