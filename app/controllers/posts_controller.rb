@@ -9,6 +9,8 @@ class PostsController < ApplicationController
   def index
     # @posts = Post.all.order(created_at: :desc)
     @posts = current_user.posts.order(created_at: :desc)
+    #another way of doing this
+    #@posts = Post.where(user_id:current_user.id).order(created_at: :desc)
     @post = Post.new
     #@post.user_id = current_user.id
   end
