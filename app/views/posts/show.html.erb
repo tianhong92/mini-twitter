@@ -1,6 +1,10 @@
 <p>
   <strong>Message:</strong>
   <ul>
-    <li><%= @post.message %> <span align="right"><%= @post.created_at%></span></li>
+    <li><%= @post.message %>
+    <p>
+      <span align="right"><%= @post.created_at.strftime('%A %B %d at %H:%M')%></span>
+    </P>
+    </li>
   </ul>
 </p>

@@ -1,0 +1,99 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @user.last_name %>
+</p>
+
+<p>
+  <strong>Crypted password:</strong>
+  <%= @user.crypted_password %>
+</p>
+
+<p>
+  <strong>Password salt:</strong>
+  <%= @user.password_salt %>
+</p>
+
+<p>
+  <strong>Persistence token:</strong>
+  <%= @user.persistence_token %>
+</p>
+
+<p>
+  <strong>Perishable token:</strong>
+  <%= @user.perishable_token %>
+</p>
+
+<p>
+  <strong>Single access token:</strong>
+  <%= @user.single_access_token %>
+</p>
+
+<p>
+  <strong>Login count:</strong>
+  <%= @user.login_count %>
+</p>
+
+<p>
+  <strong>Failed login count:</strong>
+  <%= @user.failed_login_count %>
+</p>
+
+<p>
+  <strong>Last request at:</strong>
+  <%= @user.last_request_at %>
+</p>
+
+<p>
+  <strong>Current login at:</strong>
+  <%= @user.current_login_at %>
+</p>
+
+<p>
+  <strong>Last login at:</strong>
+  <%= @user.last_login_at %>
+</p>
+
+<p>
+  <strong>Current login ip:</strong>
+  <%= @user.current_login_ip %>
+</p>
+
+<p>
+  <strong>Last login ip:</strong>
+  <%= @user.last_login_ip %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @user.active %>
+</p>
+
+<p>
+  <strong>User group:</strong>
+  <%= @user.user_group_id %>
+</p>
+
+<p>
+  <strong>Activation token:</strong>
+  <%= @user.activation_token %>
+</p>
+
+<p>
+  <strong>Password reset token:</strong>
+  <%= @user.password_reset_token %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

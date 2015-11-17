@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :logged_in_required
   #before_action :all_posts, only: [:index, :create]
   #respond_to :html, :js
   def new
@@ -6,17 +7,20 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all.order(created_at: :desc)
+    # @posts = Post.all.order(created_at: :desc)
+    @posts = current_user.posts.order(created_at: :desc)
     @post = Post.new
+    #@post.user_id = current_user.id
   end
 
   def create
     #render plain: params[:post].inspect
     @post = Post.new(post_params)
+    @post.user_id = current_user.id
     #@post.save
     #redirect_to @post
     if @post.save
-      render partial: "/post", locals: {post: @post}
+      render partial: "post", locals: {post: @post}
     end
   end
 

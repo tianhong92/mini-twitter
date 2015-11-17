@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: user_groups
+#
+#  id           :integer          not null, primary key
+#  name         :string
+#  description  :text
+#  is_an_admin  :boolean
+#  is_a_manager :boolean
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  is_an_admin: false
+  is_a_manager: false
+
+two:
+  name: MyString
+  description: MyText
+  is_an_admin: false
+  is_a_manager: false

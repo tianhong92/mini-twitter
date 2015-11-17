@@ -1,0 +1,71 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id                   :integer          not null, primary key
+#  email                :string
+#  first_name           :string
+#  last_name            :string
+#  crypted_password     :string(128)      default(""), not null
+#  password_salt        :string(128)      default(""), not null
+#  persistence_token    :string
+#  perishable_token     :string(128)
+#  single_access_token  :string
+#  login_count          :integer          default(0)
+#  failed_login_count   :integer          default(0)
+#  last_request_at      :datetime
+#  current_login_at     :datetime
+#  last_login_at        :datetime
+#  current_login_ip     :string
+#  last_login_ip        :string
+#  active               :boolean          default(FALSE), not null
+#  user_group_id        :integer
+#  activation_token     :string
+#  password_reset_token :string
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  first_name: MyString
+  last_name: MyString
+  crypted_password: MyString
+  password_salt: MyString
+  persistence_token: MyString
+  perishable_token: MyString
+  single_access_token: MyString
+  login_count: 1
+  failed_login_count: 1
+  last_request_at: 2015-11-16 10:18:15
+  current_login_at: 2015-11-16 10:18:15
+  last_login_at: 2015-11-16 10:18:15
+  current_login_ip: MyString
+  last_login_ip: MyString
+  active: false
+  user_group_id: 1
+  activation_token: MyString
+  password_reset_token: MyString
+
+two:
+  email: MyString
+  first_name: MyString
+  last_name: MyString
+  crypted_password: MyString
+  password_salt: MyString
+  persistence_token: MyString
+  perishable_token: MyString
+  single_access_token: MyString
+  login_count: 1
+  failed_login_count: 1
+  last_request_at: 2015-11-16 10:18:15
+  current_login_at: 2015-11-16 10:18:15
+  last_login_at: 2015-11-16 10:18:15
+  current_login_ip: MyString
+  last_login_ip: MyString
+  active: false
+  user_group_id: 1
+  activation_token: MyString
+  password_reset_token: MyString

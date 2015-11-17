@@ -1,2 +1,7 @@
 <h1>Hello rails!#index</h1>
 <p>Find me in app/views/welcome/index.html.erb</p>
+<% if current_user %>
+     <b>Signed in as <%= current_user.full_name %> </b>
+<%  else  %>
+     <b>You need to Sign In</b>
+<% end %>

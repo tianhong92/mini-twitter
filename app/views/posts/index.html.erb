@@ -1,25 +1,22 @@
-<h1>This is my Twitter</h1>
+<h1 align="center">This is my Twitter</h1>
 
-<a href="#" onclick="this.style.backgroundColor='#990000'">Paint it red</a>
-<a href="#" onclick="this.style.backgroundColor='#009900';this.style.color='#FFFFFF';">Paint it green</a>
-
-</p>
-
-<b>Twitters</b>
+<!--<a href="#" onclick="this.style.backgroundColor='#990000'">Paint it red</a>-->
+<!--<a href="#" onclick="this.style.backgroundColor='#009900';this.style.color='#FFFFFF';">Paint it green</a>-->
 
 <%= form_for(@post, remote:true) do|f| %>
-    <p>
-      <%= f.label :message %><br>
-      <%= f.text_area :message %>
+    <p align="center">
+
+      <%= f.text_area :message, cols: "80", rows: "10" %>
     </p>
-    <p>
-      <%= f.submit %>
+    <p align="center">
+      <%= f.submit value="Create twitter" %>
     </p>
 <% end %>
 
-<ul id="posts">
+
+<ol id="posts">
   <%= render @posts %>
-</ul>
+</ol>
 
 
 

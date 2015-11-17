@@ -1,4 +1,28 @@
 Rails.application.routes.draw do
+  get 'user_sessions/new'
+
+  resources :user_groups
+  resources :user_groups
+  get 'user_sessions/new'
+
+  resources :user_groups
+  resources :users
+  get 'login' => "user_sessions#new", :as => :login
+  get 'log_in' => "user_sessions#new", :as => :log_in
+  get 'signin' => "user_sessions#new", :as => :signin
+  get 'sign_in' => "user_sessions#new", :as => :sign_in
+  get 'logout' => "user_sessions#destroy", :as => :logout
+  get 'account' => 'users#show', :as => :account
+  get 'my_account' => 'users#show', :as => :my_account
+  get 'signup' => 'users#new', :as => :signup
+  get 'sign_up' => 'users#new', :as => :sign_up
+  get 'register' => 'users#new', :as => :register
+  get 'change_password' => 'users#change_password', :as => :change_password
+  get 'user_sessions/new'
+
+  resources :user_sessions
+  resources :user_groups
+  resources :users
   get 'welcome/index'
   resources :posts
   # The priority is based upon order of creation: first created -> highest priority.
@@ -6,6 +30,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
+  #root 'layouts#application'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
