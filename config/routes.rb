@@ -1,12 +1,5 @@
 Rails.application.routes.draw do
   get 'user_sessions/new'
-
-  resources :user_groups
-  resources :user_groups
-  get 'user_sessions/new'
-
-  resources :user_groups
-  resources :users
   get 'login' => "user_sessions#new", :as => :login
   get 'log_in' => "user_sessions#new", :as => :log_in
   get 'signin' => "user_sessions#new", :as => :signin
@@ -17,13 +10,10 @@ Rails.application.routes.draw do
   get 'signup' => 'users#new', :as => :signup
   get 'sign_up' => 'users#new', :as => :sign_up
   get 'register' => 'users#new', :as => :register
-  get 'change_password' => 'users#change_password', :as => :change_password
   get 'user_sessions/new'
-
-  resources :user_sessions
-  resources :user_groups
-  resources :users
   get 'welcome/index'
+  resources :user_sessions
+  resources :users
   resources :posts
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

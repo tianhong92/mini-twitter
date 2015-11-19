@@ -47,21 +47,4 @@ class ApplicationController < ActionController::Base
     end
     redirect_to(destination)
   end
-
-  def admin_required
-    unless current_user && current_user.admin?
-      flash[:error] = 'You are not authorised ot do that'
-      redirect_to root_url
-      return false
-      end
-    end
-
-    def manager_required
-      unless current_user && (current_user.manager? || current_user.admin?)
-        flash[:error] = 'You are not authorised to do that'
-        redirect_to root_url
-        return false
-        end
-      end
-
-    end
+end

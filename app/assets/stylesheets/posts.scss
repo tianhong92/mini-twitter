@@ -1,34 +1,81 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-ol
+.main_container
 {
-  display: block;
-  list-style-type: disc;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: 55em;
-  margin-right: 0;
-  align-content: center;
-  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin:0 auto;
+  //display: inline-block;
+}
+.twitter-tag
+{
+  width:100%;
+}
+#my-twitter-heading
+{
+  width: 20%;
+  margin: 10px auto;
+}
+#posts
+{
+  width:97%;
+}
+#post_message
+{
+  width:50%;
 }
 
 ol li
- { list-style:none;
+ {
+  &:hover {
+    color: black;
+    background-color:lightgrey;
+  }
+  list-style:none;
+  width:50%;
+  margin:0 auto;
  }
 
 ul li
-{ list-style:none;
+ { list-style:none;
+ }
+a
+{
+  width:200px;
+  word-wrap: break-word;
+  color: red;
+  &:visited {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+  }
+  &:hover {
+    color: black;
+    background-color: lightblue;
+    text-decoration: none;
+  }
 }
 
-ul
+
+.twitter-tag
 {
-  display: block;
-  list-style-type: disc;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: 0em;
-  margin-right: 0;
-  align-content: left;
-  align-items: left;
+  align:center;
+}
+#destroy-span
+{
+  font-size: 11px;
+}
+#date-span
+{
+  font-size: 11px;
+  padding-left: 35px;
+}
+#my-welcome-heading
+{
+  margin-bottom: 30px;
+}
+#word-count-div
+{
+  width:60%;
 }

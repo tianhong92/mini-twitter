@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :logged_in_required
+  # before_filter :logged_in_required, :except => [:create]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_filter :logged_in_required, :except => [:new, :create]
   before_filter :admin_required, :except => [:new, :create, :show, :edit]
@@ -33,6 +33,7 @@ class UsersController < ApplicationController
       if @user.save
         # format.html { redirect_to @user, notice: 'User was successfully created.' }
         # format.json { render :show, status: :created, location: @user }
+        flash[:success] = "You have successfully sign up!"
         redirect_to posts_path
       else
         format.html { render :new }
@@ -73,6 +74,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email, :first_name, :last_name, :password, :password_confirmation, :user_group_id)
+      params.require(:user).permit(:email, :first_name, :last_name, :password, :password_confirmation)
     end
 end

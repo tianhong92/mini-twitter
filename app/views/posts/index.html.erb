@@ -1,15 +1,22 @@
-<h1 align="center">This is my Twitter</h1>
+<div class="twitter-tag">
+  <h1 id="my-twitter-heading"><span class="label label-default">This is my Twitter</span></h1>
+</div>
 
 <!--<a href="#" onclick="this.style.backgroundColor='#990000'">Paint it red</a>-->
 <!--<a href="#" onclick="this.style.backgroundColor='#009900';this.style.color='#FFFFFF';">Paint it green</a>-->
+<div class="log-out-tag">
+<%=  link_to "Logout", logout_path %>
+  <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+</div>
 
 <%= form_for(@post, remote:true) do|f| %>
     <p align="center">
 
-      <%= f.text_area :message, cols: "80", rows: "10" %>
+      <%= f.text_area :message, cols: "50", rows: "10" %>
     </p>
+    <div id="word-count-div" align="center"> <span id="words-count">140</span> <span id="words-count"> characters left!</span> </div> 
     <p align="center">
-      <%= f.submit value="Create twitter" %>
+      <%=f.submit value="Create twitter" %>
     </p>
 <% end %>
 

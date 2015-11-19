@@ -1,7 +1,12 @@
-<h1>Hello rails!#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1 id="my-welcome-heading"><span class="label label-default">Welcome to Twitter!</span></h1>
 <% if current_user %>
-     <b>Signed in as <%= current_user.full_name %> </b>
+     <b>Signed in as <%= current_user.first_name %> </b>
+    <p>
+      <%=  link_to "Get to your twitter", posts_path() %>
+    </p>
 <%  else  %>
      <b>You need to Sign In</b>
+    <p>
+     <%=  link_to "Back to sign in", sign_in_path %>
+    </p>
 <% end %>
