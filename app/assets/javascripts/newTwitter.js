@@ -1,9 +1,6 @@
-$(document).ready(function() {
+//$(document).ready(function() {
+$(document).on("ready page:load", function(){
     $("#new_post").on("ajax:success", function (e, data, status, xhr) {
-        // success
-        // update list of tweets with jQuery
-        //$("#super-awesome-posts").prepend(data);
-        console.log("scsc");
         $("#posts").prepend(data);
         //$("#content_table").prepend(data);
     }).on("ajax:error", function (e, xhr, status, error) {
@@ -30,7 +27,6 @@ $(document).ready(function() {
                      this.value = this.value.substring(0,maxChars);
         var curr = maxChars - this.value.length;
         document.getElementById("words-count").innerHTML = curr.toString();
-        console.log(curr);
     };
 
     $("#post_message").on('keyup',checkLen);
