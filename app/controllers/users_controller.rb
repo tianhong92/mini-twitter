@@ -1,15 +1,13 @@
 class UsersController < ApplicationController
-  # before_filter :logged_in_required, :except => [:create]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_filter :logged_in_required, :except => [:new, :create]
-  before_filter :admin_required, :except => [:new, :create, :show, :edit]
-
+  respond_to :json, :html
+  # before_filter :admin_required, :except => [:new, :create, :show, :edit]
   # GET /users
   # GET /users.json
   def index
     @users = User.all
   end
-
   # GET /users/1
   # GET /users/1.json
   def show
@@ -27,20 +25,17 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @user = User.new(user_params)
-
-    # respond_to do |format|
+      @user = User.new(user_params)
       if @user.save
         # format.html { redirect_to @user, notice: 'User was successfully created.' }
         # format.json { render :show, status: :created, location: @user }
-        flash[:success] = "You have successfully sign up!"
-        redirect_to posts_path
+          flash[:success] = "You have successfully sign up!"
+          redirect_to posts_path
       else
-        format.html { render :new }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+         render :new
+          # format.json { render json: @user.errors, status: :unprocessable_entity }bask questions what this means
       end
-    end
-
+  end
 
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
@@ -55,7 +50,6 @@ class UsersController < ApplicationController
       end
     end
   end
-
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy

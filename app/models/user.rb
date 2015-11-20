@@ -30,4 +30,12 @@ class User < ActiveRecord::Base
             message: 'Your password is too short!'
         })
   end
+
+  #validation
+  validates :email, presence: true, uniqueness: true,
+            length: {within: 7..40},
+            format: {with: /\A(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6}\z/i }
+  validates :first_name, presence: true, length: {within: 2..30}
+  validates :last_name, presence: true, length: {within: 2..30}
+
 end

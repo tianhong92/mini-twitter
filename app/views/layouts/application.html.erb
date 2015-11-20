@@ -7,9 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<div class="main_container">
-  <%= yield %>
+<div class="main_container <%= !current_user ? 'background_image' : 'session_exists' %>">
+    <%= yield %>
 </div>
 </body>
 </html>

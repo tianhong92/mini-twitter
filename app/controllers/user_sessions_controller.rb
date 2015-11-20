@@ -1,8 +1,6 @@
 class UserSessionsController < ApplicationController
-
   before_filter :logged_out_required, only: [:new, :create]
   before_filter :logged_in_required, only: :destroy
-
   def new
     @user_session = UserSession.new
   end
@@ -11,7 +9,7 @@ class UserSessionsController < ApplicationController
     @user_session = UserSession.new(user_session_params)
     if @user_session.save
       flash[:success] = "Welcome back!"
-      redirect_back_or_default root_url
+      redirect_to root_url
     else
       render action: :new
     end

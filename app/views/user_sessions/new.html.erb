@@ -1,37 +1,21 @@
-<h1>Sign In</h1>
-
-<%= form_for @user_session, as: :user_session, url: { action: :create } do |f| %>
-    <% if @user_session.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@user_session.errors.count, 'error') %> prevented you from logging in:</h2>
-          <ul>
-            <% @user_session.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
-
-    <div class="field">
-      <%= f.label :login, 'Email' %><br />
-      <%= f.text_field :email %>
+<div class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" id="sign-in-model-dialog">
+    <div class="modal-content" id="sign-in-model-content">
+      <div class="modal-header">
+        <h1 id="my-welcome-heading"><span class="label label-default">Please Sign in!</span></h1>
+      </div>
+      <div class="modal-body">
+        <%= render 'form' %>
+      </div>
+      <div class="modal-footer">
+         <%=  link_to "Sign up", sign_up_path %>
+          <p>
+            <%= link_to 'forgot password?', root_url %>
+          </P>
+      </div>
     </div>
-    <div class="field">
-      <%= f.label :password %><br />
-      <%= f.password_field :password %>
-    </div>
-    <div class="actions">
-      <%= f.submit 'Sign in' %>
-    </div>
+  </div>
+</div>
 
 
 
-<% end %>
-<%=  link_to "Sign up", sign_up_path %>
-<p>
-<%= link_to 'forgot password?', root_url %>
-</P>
-
-<script type="text/javascript">
-  document.getElementById('user_session_login').focus();
-</script>

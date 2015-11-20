@@ -1,12 +1,13 @@
-<h1 id="my-welcome-heading"><span class="label label-default">Welcome to Twitter!</span></h1>
+<div class="jumbotron">
+  <b>Signed in as <%= current_user.first_name %> </b>
+<h2 id="my-welcome-heading"><span class="label label-default">Welcome to Twitter!</span></h2>
 <% if current_user %>
-     <b>Signed in as <%= current_user.first_name %> </b>
     <p>
-      <%=  link_to "Get to your twitter", posts_path() %>
+      <span class="glyphicon glyphicon-triangle-right"></span><%= link_to "Start Twitter!", posts_path %>
     </p>
 <%  else  %>
-     <b>You need to Sign In</b>
     <p>
-     <%=  link_to "Back to sign in", sign_in_path %>
+      <span class="glyphicon glyphicon-triangle-left"></span><%= link_to "Sign in first!", sign_in_path %>
     </p>
 <% end %>
+</div>

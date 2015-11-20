@@ -119,6 +119,8 @@ GEM
     rdoc (4.2.0)
       json (~> 1.4)
     request_store (1.2.0)
+    responders (2.1.0)
+      railties (>= 4.2.0, < 5)
     sass (3.4.19)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -168,6 +170,7 @@ DEPENDENCIES
   jquery-rails
   rails (= 4.2.4)
   rails-assets-bootstrap!
+  responders
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
