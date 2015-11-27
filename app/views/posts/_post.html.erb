@@ -1,4 +1,7 @@
 <li class="panel-body">
+  <% if current_user %>
+      <%=link_to(image_tag(current_user.adorable_avatar(50, 'classname'), size:'50x50', alt:"The profile image of "+current_user.first_name), user_path(current_user.id), title: current_user.full_name ) %>
+  <%end%>
   <%=post.message%>
   <p>
     <span id="destroy-span">

@@ -12,7 +12,14 @@
 require 'test_helper'
 
 class PostTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "the truth" do
+    assert true
+  end
+  test "should not save post without message" do
+    post=Post.new
+    assert_not post.save, "save without a message"
+  end
+  test "should save post with message" do
+    assert posts(:one).save
+  end
 end

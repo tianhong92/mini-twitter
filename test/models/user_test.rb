@@ -22,7 +22,11 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should not save post without email" do
+    user=User.new
+    assert_not user.save, "save without a email, first_name, last_name"
+  end
+  test "should save user" do
+    assert users(:ben).save
+  end
 end

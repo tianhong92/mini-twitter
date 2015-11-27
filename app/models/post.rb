@@ -12,5 +12,5 @@
 class Post < ActiveRecord::Base
   belongs_to :user
   validates :message, presence: true,
-            length: { maximum:140  }
+            length: { minimum:2, maximum:140  }
 end

@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
+  require 'digest/md5'
+  include ApplicationHelper
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_filter :logged_in_required, :except => [:new, :create]
   respond_to :json, :html
-  # before_filter :admin_required, :except => [:new, :create, :show, :edit]
+  # http_basic_authenticate_with name: "admin", password: "secret", except: :index
   # GET /users
   # GET /users.json
   def index
@@ -11,30 +13,30 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @user = User.find(params[:id])
   end
-
   # GET /users/new
   def new
     @user = User.new
   end
-
-  # GET /users/1/edit
-  def edit
-  end
-
   # POST /users
   # POST /users.json
   def create
-      @user = User.new(user_params)
-      if @user.save
-        # format.html { redirect_to @user, notice: 'User was successfully created.' }
-        # format.json { render :show, status: :created, location: @user }
-          flash[:success] = "You have successfully sign up!"
-          redirect_to posts_path
-      else
-         render :new
-          # format.json { render json: @user.errors, status: :unprocessable_entity }bask questions what this means
-      end
+    @user = User.new(user_params)
+    if @user.save
+      # format.html { redirect_to @user, notice: 'User was successfully created.' }
+      # format.json { render :show, status: :created, location: @user }
+      flash[:success] = "You have successfully sign up!"
+      redirect_to posts_path
+    else
+        render :new
+        # render json: @post.errors, status: 422
+    end
+  end
+
+  # GET /users/1/edit
+  def edit
+    @user = User.find(params[:id])
   end
 
   # PATCH/PUT /users/1
@@ -70,4 +72,5 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:email, :first_name, :last_name, :password, :password_confirmation)
     end
+
 end

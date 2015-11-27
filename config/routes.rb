@@ -5,8 +5,6 @@ Rails.application.routes.draw do
   get 'signin' => "user_sessions#new", :as => :signin
   get 'sign_in' => "user_sessions#new", :as => :sign_in
   get 'logout' => "user_sessions#destroy", :as => :logout
-  get 'account' => 'users#show', :as => :account
-  get 'my_account' => 'users#show', :as => :my_account
   get 'signup' => 'users#new', :as => :signup
   get 'sign_up' => 'users#new', :as => :sign_up
   get 'register' => 'users#new', :as => :register

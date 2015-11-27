@@ -1,4 +1,5 @@
 //$(document).ready(function() {
+// use "document.on" instead of "document.ready" because of Turbolinks
 $(document).on("ready page:load", function(){
     $("#new_post").on("ajax:success", function (e, data, status, xhr) {
         $("#posts").prepend(data);
@@ -10,16 +11,7 @@ $(document).on("ready page:load", function(){
     });
 });
 
-
-//$(document).ready(function(){
-//    $("p").on("click", function(){
-//        alert("The paragraph was clicked.");
-//    });
-//});
-//$("#post_message").textareaCounter({ limit: 100 });
-//$("#post_message").on('keyup',textareaCounter({ limit: 100 }));
-
-$(document).ready(function() {
+$(document).on("ready page:load", function(){
     function checkLen()
     {
         var maxChars = 140;
@@ -28,6 +20,5 @@ $(document).ready(function() {
         var curr = maxChars - this.value.length;
         document.getElementById("words-count").innerHTML = curr.toString();
     };
-
     $("#post_message").on('keyup',checkLen);
 });

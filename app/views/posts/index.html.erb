@@ -1,6 +1,9 @@
 <div class="twitter-tag">
   <h1 id="my-twitter-heading"><span class="label label-default">This is my Twitter</span></h1>
 </div>
+<div>
+  <p>Signed in as: <b><%= current_user.full_name%></b></p>
+</div>
 <div class="log-out-tag">
   <%=  link_to "Logout", logout_path %>
   <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>

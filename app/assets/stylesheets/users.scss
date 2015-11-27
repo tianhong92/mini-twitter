@@ -29,3 +29,9 @@
   background: center/cover image-url('background-nosession.jpg');
   min-height:100vh;
 }
+
+#error_explanation
+{
+  width: 24em;
+  word-wrap: break-word;
+}

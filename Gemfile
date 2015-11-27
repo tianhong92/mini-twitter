@@ -1,6 +1,4 @@
 source 'https://rubygems.org'
-
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use sqlite3 as the database for Active Record
@@ -26,18 +24,29 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'responders'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem "slim-rails"
+# gem 'avatars_for_rails'
 # Use Unicorn as the app server
 # gem 'unicorn'
-
+gem 'avatar'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rspec-rails', '~> 3.0'
+  gem 'capybara', '~> 2.4.4'
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'minitest'
+  gem 'minitest-reporters'
+  gem 'capybara-webkit', '~> 1.7', '>= 1.7.1'
+  gem 'database_cleaner'
+  # gem 'shoulda-matchers', '~> 3.0'
 end
-
+group :test do
+  gem 'shoulda-matchers','~> 3.0'
+end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'

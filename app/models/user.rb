@@ -38,4 +38,25 @@ class User < ActiveRecord::Base
   validates :first_name, presence: true, length: {within: 2..30}
   validates :last_name, presence: true, length: {within: 2..30}
 
+  def full_name
+    self.first_name.titleize + ' ' + self.last_name.gsub('O\'','O\' ').titleize.gsub('O\' ','O\'')
+  end
+
+  #resource: http://avatar.rubyforge.org/
+  # def Avatar
+  #     email_address = params[:email].downcase
+  #     hash =Digest::MD5.hexdigest(email_address)
+  #     image_src="http://www.gravatar.com/avatar/#{hash}"
+  # end
+  before_save :save_user_md5
+  def save_user_md5
+    self.img_mb5 = Digest::MD5.hexdigest(self.email)
+  end
+  def adorable_avatar(size = 75, classes = '')
+    hash = self.img_mb5
+    src = "http://api.adorable.io/avatars/#{size}/#{hash}.png"
+    alt = self.first_name
+    size = "#{size}x#{size}"
+    return src
+  end
 end
