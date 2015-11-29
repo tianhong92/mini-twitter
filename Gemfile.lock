@@ -47,7 +47,6 @@ GEM
       activesupport (>= 3.2)
       request_store (~> 1.0)
       scrypt (>= 1.2, < 3.0)
-    avatar (0.2.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
@@ -219,7 +218,6 @@ PLATFORMS
 DEPENDENCIES
   annotate
   authlogic
-  avatar
   byebug
   capybara (~> 2.4.4)
   capybara-webkit (~> 1.7, >= 1.7.1)

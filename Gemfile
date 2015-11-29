@@ -28,7 +28,6 @@ gem "slim-rails"
 # gem 'avatars_for_rails'
 # Use Unicorn as the app server
 # gem 'unicorn'
-gem 'avatar'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
