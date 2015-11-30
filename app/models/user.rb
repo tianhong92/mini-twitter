@@ -51,6 +51,7 @@ class User < ActiveRecord::Base
   before_save :save_user_md5
   def save_user_md5
     self.img_mb5 = Digest::MD5.hexdigest(self.email)
+    p self.img_mb5
   end
   def adorable_avatar(size)
     hash = self.img_mb5
