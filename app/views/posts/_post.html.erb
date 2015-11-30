@@ -1,17 +1,24 @@
 <li class="panel-body">
-  <% if current_user %>
-      <%=link_to(image_tag(current_user.adorable_avatar(50, 'classname'), size:'50x50', alt:"The profile image of "+current_user.first_name), user_path(current_user.id), title: current_user.full_name ) %>
-  <%end%>
-  <%=post.message%>
   <p>
-    <span id="destroy-span">
-      <%= link_to 'Destroy', post_path(post.id),
-                      method: :delete%>
-    </span>
-    <span id="date-span">
-      <%= link_to post.created_at.strftime('%A %B %d at %H:%M'),post_path(post.id)%>
+    <% if current_user == post.user %>
+      <%=link_to(image_tag(post.user.adorable_avatar(50), size:'50x50', alt:"The profile image of "+post.user.first_name), user_path(post.user_id), title: post.user.full_name ) %>
+        <% else %>
+        <%=link_to(image_tag(post.user.adorable_avatar(50), size:'50x50', alt:"The profile image of "+post.user.first_name), post_path(post.id), title: post.user.full_name ) %>
+    <% end %>
+    <span id="post-content-span">
+      <%= link_to post.message, post_path(post.id), Style:"text-decoration: none;" %>
     </span>
   </p>
+  <% if current_user == post.user %>
+    <p>
+      <span id="destroy-span">
+        <%= link_to 'Destroy', post_path(post.id), method: :delete, Style:"text-decoration: none;" %>
+      </span>
+      <span id="date-span">
+        <span>&nbsp</span><%= post.created_at.strftime('%A %B %d at %H:%M') %>
+      </span>
+    </p>
+  <% end %>
 </li>
 <br/>
 

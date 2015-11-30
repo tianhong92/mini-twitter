@@ -25,7 +25,6 @@
 {
   width:50%;
 }
-
 ol li
  {
   &:hover {
@@ -45,6 +44,7 @@ a
   width:200px;
   word-wrap: break-word;
   color: red;
+  text-decoration: none;
   &:visited {
     text-decoration: none;
     color: black;
@@ -56,8 +56,6 @@ a
     text-decoration: none;
   }
 }
-
-
 .twitter-tag
 {
   align:center;
@@ -75,7 +73,30 @@ a
 {
   margin-bottom: 30px;
 }
-#word-count-div
+#word-count-plus-commit-div
 {
-  width:60%;
+  width:100%;
 }
+#words-record-button-div
+{
+  width:50%;
+  margin:0 auto;
+}
+#word-count-span
+{
+  width:50%;
+}
+#create-post-span
+{
+  width:50%;
+}
+.float {
+  &-left {
+    float: left;
+  }
+
+  &-right {
+    float: right;
+  }
+}
+

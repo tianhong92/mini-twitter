@@ -52,11 +52,10 @@ class User < ActiveRecord::Base
   def save_user_md5
     self.img_mb5 = Digest::MD5.hexdigest(self.email)
   end
-  def adorable_avatar(size = 75, classes = '')
+  def adorable_avatar(size)
     hash = self.img_mb5
-    src = "http://api.adorable.io/avatars/#{size}/#{hash}.png"
-    alt = self.first_name
     size = "#{size}x#{size}"
+    src = "http://api.adorable.io/avatars/#{size}/#{hash}.png"
     return src
   end
 end
