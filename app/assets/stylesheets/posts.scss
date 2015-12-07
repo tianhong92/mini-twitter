@@ -66,6 +66,11 @@ a {
   padding-left: 35px;
 }
 
+#date-span_others{
+  font-size: 11px;
+  padding-left: 80px;
+}
+
 #my-welcome-heading {
   margin-bottom: 30px;
 }
@@ -104,8 +109,13 @@ a {
 
 #post-content-link{
   text-decoration: none;
+  margin-left: 10px;
 }
 
 #destroy-post-link{
   text-decoration: none;
+}
+
+#words-count{
+  margin-right: 5px;
 }

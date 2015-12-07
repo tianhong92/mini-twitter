@@ -4,11 +4,9 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_filter :logged_in_required, :except => [:new, :create]
   respond_to :json, :html
-
   def index
     @users = User.all
   end
-
 
   def show
   end
@@ -16,7 +14,6 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
-
 
   def create
     @user = User.new(user_params)

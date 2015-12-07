@@ -3,7 +3,7 @@
     #error_explanation
       h2 = pluralize(@user.errors.count, "error")
       | prohibited this user from being saved:
-        ul
+      ul
          -@user.errors.full_messages.each do |message|
           li = message
   .field

@@ -1,11 +1,5 @@
 module PostsHelper
-  def getDate
-      postDate= @post.created_at.strftime('%A %B %C at %H:%M')
-      return postDate
-  end
-
-  def getDate2(post)
-    postDate= post.created_at.strftime('%A %B %C at %H:%M')
-    return postDate
+  def format_date(date)
+    date.strftime('%A %B %C at %H:%M')
   end
 end

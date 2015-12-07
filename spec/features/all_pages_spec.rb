@@ -1,10 +1,6 @@
 require 'rails_helper'
 
 RSpec.feature "adding users" do
-
-    # activate_authlogic
-    # UserSession.create(user)
-  # end
   describe "pages Spec" do
    def log_in_as(the_user)
     visit sign_up_path
@@ -14,8 +10,6 @@ RSpec.feature "adding users" do
     fill_in :user_password, with: the_user.password
     fill_in :user_password_confirmation, with: the_user.password_confirmation
     click_on("Create User")
-    # user = FactoryGirl.create(:user)
-    # visit user_path(user)
     expect(page).to have_content(the_user.first_name)
     expect(page).to have_content(the_user.last_name)
     click_on("Logout")
