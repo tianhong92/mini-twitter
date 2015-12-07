@@ -15,7 +15,7 @@ $(document).on("ready page:load", function(){
     {
         var maxChars = 140;
         if (this.value.length > maxChars) 
-                     this.value = this.value.substring(0,maxChars);
+            this.value = this.value.substring(0,maxChars);
         var curr = maxChars - this.value.length;
         document.getElementById("words-count").innerHTML = curr.toString();
     };

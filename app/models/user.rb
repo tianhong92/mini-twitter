@@ -50,6 +50,5 @@ class User < ActiveRecord::Base
     hash = self.img_mb5
     size = "#{size}x#{size}"
     src = "http://api.adorable.io/avatars/#{size}/#{hash}.png"
-    return src
   end
 end

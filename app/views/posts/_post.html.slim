@@ -1,17 +1,17 @@
-li class="panel-body"
+li.panel-body
   p
     -if current_user == post.user
       =link_to(image_tag(post.user.adorable_avatar(50), size: '50x50', alt: "The profile image of " + post.user.first_name), user_path(post.user_id), title: post.user.full_name )
     - else
       =link_to(image_tag(post.user.adorable_avatar(50), size: '50x50', alt: "The profile image of " + post.user.first_name), post_path(post.id), title: post.user.full_name )
-    span id="post-content-span"
+    span#post-content-span
       = link_to post.message, post_path(post.id), id: "post-content-link"
   -if current_user == post.user
-    span id="destroy-span"
+    span#destroy-span
       = link_to 'Destroy', post_path(post.id), method: :delete, id: "destroy-post-link"
-    span id="date-span"
+    span#date-span
       =format_date(post.created_at)
   -else
-    span id="date-span_others"
+    span#date-span_others
       = format_date(post.created_at)
 br

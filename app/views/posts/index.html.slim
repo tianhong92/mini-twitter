@@ -12,10 +12,10 @@
     = f.text_area :message, cols: "50", rows: "4", placeholder:"What's happening?"
   #word-count-plus-commit-div
     #words-record-button-div
-      span#word-count-span class="float-left"
+      span#word-count-span.float-left
       span#words-count 140
       span characters left!
-      span#create-post-span class="float-right"
+      span#create-post-span.float-right
         = f.submit value= "Create twitter", id:"create-post-link"
 ol#posts
   = render @posts
