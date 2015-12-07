@@ -3,10 +3,8 @@
 $(document).on("ready page:load", function(){
     $("#new_post").on("ajax:success", function (e, data, status, xhr) {
         $("#posts").prepend(data);
-        //$("#content_table").prepend(data);
+        $("#post_message").val("");
     }).on("ajax:error", function (e, xhr, status, error) {
-        // failure
-        // do something
         alert('tweet not saved');
     });
 });
@@ -22,3 +20,5 @@ $(document).on("ready page:load", function(){
     };
     $("#post_message").on('keyup',checkLen);
 });
+
+

@@ -1,0 +1,13 @@
+.modal.show aria-hidden="true" role="dialog" tabindex="-1"
+  #sign-up-model-dialog.modal-dialog
+    #sign-up-model-content.modal-content
+      .modal-header
+        h1#my-welcome-heading
+          span.label.label-default Please Sign up!
+      .modal-body
+        = render 'form'
+      .modal-footer
+        = link_to 'Back to sign in', users_path
+
+
+

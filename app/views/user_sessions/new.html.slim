@@ -1,0 +1,19 @@
+div class="modal show" tabindex="-1" role="dialog" aria-hidden="true"
+  .modal-dialog id="sign-in-model-dialog"
+    .modal-content id="sign-in-model-content"
+      .modal-header
+        h1 id="my-welcome-heading"
+          span class="label label-default" Please Sign in!
+      .modal-body
+        = render 'form'
+      .modal-footer
+        =link_to sign_up_path do
+          span Sign up!
+        p
+          = link_to root_url do
+            span  forgot password?
+
+
+
+
+

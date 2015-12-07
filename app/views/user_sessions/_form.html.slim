@@ -1,0 +1,15 @@
+= form_for @user_session, as: :user_session, url: { action: :create } do |f|
+  -if @user_session.errors.any?
+    #error_explanation
+      h2
+        = pluralize(@user_session.errors.count, 'error')
+        | prevented you from logging in:
+        ul
+          -@user_session.errors.full_messages.each do |message|
+            li = message
+  .form-group
+    = f.text_field :email, class: "form-control input-lg", placeholder: "Email:"
+  .field
+    = f.password_field :password,  class: "form-control input-lg", placeholder: "Password:"
+  .actions
+    = f.submit 'Sign in', class:"btn btn-primary btn-lg btn-block"

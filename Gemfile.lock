@@ -235,7 +235,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   shoulda-matchers (~> 3.0)
-  slim-rails
+  slim-rails (~> 3.0, >= 3.0.1)
   spring
   sqlite3
   turbolinks

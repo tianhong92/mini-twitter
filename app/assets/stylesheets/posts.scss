@@ -1,47 +1,46 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.main_container
-{
+.main_container {
   width: 100%;
   //max-width: 1200px;
   margin:0 auto;
   //display: inline-block;
 }
-.twitter-tag
-{
-  width:100%;
+
+.twitter-tag {
+  width: 100%;
 }
-#my-twitter-heading
-{
+
+#my-twitter-heading {
   width: 20%;
   margin: 10px auto;
 }
-#posts
-{
-  width:97%;
+
+#posts {
+  width: 97%;
 }
-#post_message
-{
-  width:50%;
+
+#post_message {
+  width: 50%;
 }
-ol li
- {
+
+ol li {
   &:hover {
     color: black;
-    background-color:lightgrey;
+    background-color: lightgrey;
   }
-  list-style:none;
-  width:50%;
+  list-style: none;
+  width: 50%;
   margin:0 auto;
  }
 
-ul li
- { list-style:none;
- }
-a
-{
-  width:200px;
+ul li {
+  list-style: none;
+}
+
+a {
+  width: 200px;
   word-wrap: break-word;
   color: red;
   text-decoration: none;
@@ -56,40 +55,42 @@ a
     text-decoration: none;
   }
 }
-.twitter-tag
-{
-  align:center;
+
+.twitter-tag {
+  align: center;
 }
-#destroy-span
-{
+
+#destroy-span {
   font-size: 11px;
 }
-#date-span
-{
+
+#date-span {
   font-size: 11px;
   padding-left: 35px;
 }
-#my-welcome-heading
-{
+
+#my-welcome-heading {
   margin-bottom: 30px;
 }
-#word-count-plus-commit-div
-{
-  width:100%;
+
+#word-count-plus-commit-div {
+  width: 100%;
+  margin-bottom: 50px;
 }
-#words-record-button-div
-{
-  width:50%;
+
+#words-record-button-div {
+  width: 50%;
   margin:0 auto;
 }
-#word-count-span
-{
-  width:50%;
+
+#word-count-span {
+  width: 50%;
 }
-#create-post-span
-{
-  width:50%;
+
+#create-post-span {
+  width: 50%;
 }
+
 .float {
   &-left {
     float: left;
@@ -100,3 +101,14 @@ a
   }
 }
 
+#create-post-link{
+   float: right;
+}
+
+#post-content-link{
+  text-decoration: none;
+}
+
+#destroy-post-link{
+  text-decoration: none;
+}

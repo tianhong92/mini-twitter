@@ -1,0 +1,21 @@
+.panel.panel-info
+  .panel-heading
+    p
+      span
+        | Signed in as:
+        b= current_user.full_name
+      span.float-right
+        = link_to "Logout", logout_path
+        span.glyphicon.glyphicon-log-out aria-hidden="true"
+= form_for(@post, remote:true) do|f|
+  p align="center"
+    = f.text_area :message, cols: "50", rows: "4", placeholder:"What's happening?"
+  #word-count-plus-commit-div
+    #words-record-button-div
+      span#word-count-span class="float-left"
+      span#words-count 140
+      span characters left!
+      span#create-post-span class="float-right"
+        = f.submit value= "Create twitter", id:"create-post-link"
+ol#posts
+  = render @posts

@@ -4,6 +4,7 @@ class UserSessionsController < ApplicationController
   def new
     @user_session = UserSession.new
   end
+
   def create
     @user_session = UserSession.new(user_session_params)
     if @user_session.save
@@ -13,11 +14,13 @@ class UserSessionsController < ApplicationController
       render action: :new
     end
   end
+
   def destroy
     current_user_session.destroy
     flash[:success] = "You are now logged out"
     redirect_to root_url
   end
+
   private
   def user_session_params
     params.require(:user_session).permit(:email, :password)

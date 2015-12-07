@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title Twitter
+    = stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+    /.main_container  class ==!current_user ? 'background_image' : 'session_exists'
+    .main_container  class="#{ !current_user ? 'background_image' : 'session_exists'}"
+      == yield
+
+
+

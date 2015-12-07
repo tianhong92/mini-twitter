@@ -30,3 +30,4 @@ class UserTest < ActiveSupport::TestCase
     assert users(:ben).save
   end
 end
+

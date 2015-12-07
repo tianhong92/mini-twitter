@@ -1,0 +1,8 @@
+p
+  .jumbotron
+    h2 = @post.message
+    h5  Created:
+    = getDate()
+span class="glyphicon glyphicon-triangle-left"
+= link_to posts_path do
+  span Back

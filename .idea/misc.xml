@@ -10,8 +10,5 @@
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
-  <component name="ProjectPlainTextFileTypeManager">
-    <file url="file://$PROJECT_DIR$/app/views/layouts/application.html.slim" />
-  </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="ruby-2.0.0-p645" project-jdk-type="RUBY_SDK" />
 </project>
