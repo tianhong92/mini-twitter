@@ -1,37 +1,32 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-#sign-up-model-content
-{
-  width:60%;
+#sign-up-model-content {
+  width: 60%;
 }
-#sign-up-model-dialog
-{
-  margin-top:80px;
-  margin-left:180px;
+
+#sign-up-model-dialog {
+  margin-top: 80px;
+  margin-left: 180px;
 }
-#sign-in-model-content
-{
-  width:60%;
+
+#sign-in-model-content {
+  width: 60%;
 }
-#sign-in-model-dialog
-{
-  margin-top:80px;
-  margin-left:180px;
+
+#sign-in-model-dialog {
+  margin-top: 80px;
+  margin-left: 180px;
 }
 
 .background_image {
   background: center/cover image-url('background.jpg');
-  min-height:100vh;
+  min-height: 100vh;
 }
 
 .session_exists{
   background: center/cover image-url('background-session.jpg');
-  min-height:100vh;
+  min-height: 100vh;
 }
 
-#error_explanation
-{
+#error_explanation {
   width: 24em;
   word-wrap: break-word;
 }

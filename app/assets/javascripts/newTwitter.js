@@ -4,6 +4,7 @@ $(document).on("ready page:load", function(){
     $("#new_post").on("ajax:success", function (e, data, status, xhr) {
         $("#posts").prepend(data);
         $("#post_message").val("");
+        document.getElementById("words-count").innerHTML = "140"
     }).on("ajax:error", function (e, xhr, status, error) {
         alert('tweet not saved');
     });
