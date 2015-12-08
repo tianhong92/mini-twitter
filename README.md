@@ -1,12 +1,13 @@
 # MiniTwitter
 ## This is a mini Twitter app on rails 
-* Set up the environment
+* Installation
   * Ruby Version
-  > Ruby '2.2.3'
+    **`Ruby '2.2.3'`
   * Rails Version
-  > Rails '4.2.4'
-  ' Run bundle install'
-  ' Rake db:migrate'
+    **` Rails '4.2.4'`
+  * Install gems and set up db
+    ` Run bundle install`
+    ` Rake db:migrate`
 * Key features
   * Add Authlogic for the users to sign up/log in
   * Add adorable Avatar for users profile image
