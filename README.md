@@ -1,5 +1,4 @@
 # MiniTwitter
-## This is a mini Twitter app on rails 
 ## Installation
 ## Ruby Version
 
