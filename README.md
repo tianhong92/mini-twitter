@@ -1,5 +1,5 @@
 # MiniTwitter
-## Installation
+
 ## Ruby Version
 
     Ruby '2.2.3' 
