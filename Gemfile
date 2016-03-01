@@ -26,6 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'responders'
 
 gem 'slim-rails', '~> 3.0', '>= 3.0.1'
+gem 'will_paginate', '~> 3.0.6'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'avatars_for_rails'

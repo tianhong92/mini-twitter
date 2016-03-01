@@ -5,6 +5,7 @@ $(document).on("ready page:load", function(){
         $("#posts").prepend(data);
         $("#post_message").val("");
         document.getElementById("words-count").innerHTML = "140"
+        //document.location.reload(true);
     }).on("ajax:error", function (e, xhr, status, error) {
         alert('tweet not saved');
     });
@@ -21,5 +22,7 @@ $(document).on("ready page:load", function(){
     };
     $("#post_message").on('keyup',checkLen);
 });
+
+
 
 
