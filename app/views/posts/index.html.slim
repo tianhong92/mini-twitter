@@ -17,5 +17,7 @@
       span characters left!
       span#create-post-span.float-right
         = f.submit value= "Create twitter", id:"create-post-link"
-ol#posts
-  = render @posts
+.container
+  ol#posts
+    = render @posts
+    = will_paginate @posts

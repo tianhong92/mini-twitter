@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :logged_in_required
   def index
     #@posts = current_user.posts.order(created_at: :desc)
-    @posts = Post.all.order(created_at: :desc).paginate(:page => params[:page], per_page: 10)
+    @posts = Post.all.order(created_at: :desc).paginate(:page => params[:page], per_page: 5)
     #another way of doing this
     #@posts = Post.where(user_id:current_user.id).order(created_at: :desc)
     @post = Post.new
