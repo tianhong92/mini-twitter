@@ -10,10 +10,17 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
+
+//= require ./proui/vendor/jquery.min.js
+//= require ./proui/vendor/bootstrap.min.js
+//= require ./proui/plugins.js
+//= require ./proui/main.js
+
+
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
 //= require newTwitter
-//= require_tree .
-
+//=/ require_tree .
