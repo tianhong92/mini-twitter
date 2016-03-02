@@ -1,14 +1,14 @@
-p id="notice"
-  = notice
-p
-  <strong>Email:</strong>
-  = @user.email
-p
-  <strong>First name:</strong>
-  = @user.first_name
-p
-  <strong>Last name:</strong>
-  = @user.last_name
-= link_to 'Edit', edit_user_path(@user)
-||
-= link_to 'Back', posts_path
+.container
+  .jumbotron
+    p
+      | Email:
+      = @user.email
+    p
+      | First name:
+      = @user.first_name
+    p
+      | Last name:
+      = @user.last_name
+    = link_to 'Edit', edit_user_path(@user)
+    ||
+    = link_to 'Back', posts_path

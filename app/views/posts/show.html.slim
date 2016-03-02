@@ -1,8 +1,9 @@
-p
+.container
   .jumbotron
     h2 = @post.message
-    h5  Created:
-    = format_date(@post.created_at)
-span class="glyphicon glyphicon-triangle-left"
-= link_to posts_path do
-  span Back
+    h5
+     |Created:
+     =format_date(@post.created_at)
+    span class="glyphicon glyphicon-triangle-left"
+      = link_to posts_path do
+        span Back
