@@ -18,4 +18,6 @@
   * Add adorable Avatar for users profile image
   * Use ajax to allow users add/destroy their twitters asynchronously
   * Validation of the format of user and twitter information
+  * Twitter Bootstrap	
 * Copyright (c) 2015 [Ben Wang](https://github.com/tianhong92/Twitter_With_Authlogic.git) (<tianhong229@gmail.com>)
+
