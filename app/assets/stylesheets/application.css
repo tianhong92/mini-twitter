@@ -11,8 +11,8 @@
  * file per style scope.
  *
  *= require ./proui/bootstrap.min.css
- *=/ require ./proui/plugins.css
- *=/ require ./proui/main.css
+ *= require ./proui/plugins.css
+ *= require ./proui/main.css
  *\= require ./proui/themes/
  *= require ./proui/themes.css
  *= require_tree .
