@@ -6,8 +6,21 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
-    /.main_container  class ==!current_user ? 'background_image' : 'session_exists'
-    .main_container  class="#{ !current_user ? 'background_image' : 'session_exists'}"
+      - if current_user
+        .navbar.navbar-default
+          .container-fluid
+            .navbar-header
+             h2
+              | Mini-Twi
+              span id="navi-sign-in-span"
+                small
+                  | Signed in as:
+                  span #{current_user.full_name}
+            .nav.navbar-nav.navbar-right
+              span.nav_logout
+                h3
+                  = link_to "Logout", logout_path
+
       == yield
 
 

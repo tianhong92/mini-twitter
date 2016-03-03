@@ -1,13 +1,16 @@
-.jumbotron
-  h2 id="my-welcome-heading"
-    span class="label label-default" Welcome to Twitter!
+.container
   - if current_user
+    .page-header
+      h2 id="my-welcome-heading"
+        span class="label label-default"
+          | Welcome to Twitter!
     p
       span class="glyphicon glyphicon-triangle-right"
       == link_to posts_path do
         span  Start Twitter!
   - else
-    p
-      span class="glyphicon glyphicon-triangle-left"
-      == link_to sign_in_path do
-        span  Sign in first!
+    .jumbotron
+      p
+        span class="glyphicon glyphicon-triangle-left"
+        == link_to sign_in_path do
+          span  Sign in first!
