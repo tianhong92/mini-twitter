@@ -16,13 +16,8 @@
   margin-left: 180px;
 }
 
-.background_image {
-  background: center/cover image-url('background.jpg');
-  min-height: 100vh;
-}
-
-.session_exists{
-  background: center/cover image-url('background-session.jpg');
+.container_log_in{
+  background: center/cover image-url('log_in_bg.jpg');
   min-height: 100vh;
 }
 

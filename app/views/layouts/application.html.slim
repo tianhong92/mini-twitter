@@ -6,6 +6,8 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
+    /.main_container  class="#{ !current_user ? 'session_exists' : 'background_image'}"
+    .main_container  class="#{!current_user ? 'container_log_in' : nil}"
       - if current_user
         .navbar.navbar-default
           .container-fluid
