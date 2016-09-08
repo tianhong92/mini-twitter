@@ -107,6 +107,7 @@ GEM
     multi_json (1.11.2)
     nokogiri (1.6.6.4)
       mini_portile (~> 0.6.0)
+    pg (0.18.4)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -229,6 +230,7 @@ DEPENDENCIES
   jquery-rails
   minitest
   minitest-reporters
+  pg
   rails (= 4.2.4)
   rails-assets-bootstrap!
   responders
